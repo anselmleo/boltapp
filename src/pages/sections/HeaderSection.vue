@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, useRoute } from 'vue-router'
 import { computed } from 'vue'
+import { ref } from 'vue'
 
 const route = useRoute()
 const pageTheme = computed(() => {
@@ -20,6 +21,7 @@ const pageTheme = computed(() => {
     }
   }
 })
+const isModalOpen = ref(false)
 </script>
 
 <template>
@@ -64,6 +66,7 @@ const pageTheme = computed(() => {
             src="../../assets/menu-black.png"
             alt=""
             class="w-5 h-5 mt-1"
+            @click="isModalOpen = true"
           />
           <img v-else src="../../assets/menu-white.png" alt="" class="w-5 h-5 mt-1" />
         </div>

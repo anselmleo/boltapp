@@ -6,6 +6,7 @@ import BannerCTA from '../components/BannerCTA.vue'
 
 <template>
   <main class="relative w-full h-580px">
+    <div id="more-menu-modal"></div>
     <img
       src="../assets/banner2.jpg"
       alt=""
@@ -159,6 +160,82 @@ import BannerCTA from '../components/BannerCTA.vue'
         </div>
         <div class="w-1/2 m-10">
           <img src="../assets/feature-cities-for-people.webp" class="rounded-xl" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="w-8/12 mx-auto mb-40">
+      <div class="flex w-full">
+        <div class="w-1/2 m-10">
+          <img src="../assets/feature-bolt-building.webp" class="rounded-xl" alt="" />
+        </div>
+        <div class="w-1/2 pl-20 pr-20">
+          <h1 class="text-4xl font-semibold mb-5">À propos</h1>
+          <p class="mb-10 text-gray-500 text-xl">
+            Bolt is the first European mobility super-app. We’re making cities for people, offering
+            better alternatives for every purpose a private car serves — including ride-hailing,
+            shared cars, scooters, and food and grocery delivery.
+          </p>
+          <div class="mb-10">
+            <div class="flex">
+              <div
+                class="flex items-center justify-center rounded-full bg-green-600 w-5 h-5 text-white mr-5 text-sm"
+              >
+                1
+              </div>
+              <h3 class="font-semibold">150+ million</h3>
+            </div>
+            <p class="pl-10 mt-2 text-gray-500">customers around the world.</p>
+          </div>
+          <div class="mb-10">
+            <div class="flex">
+              <div
+                class="flex items-center justify-center rounded-full bg-green-600 w-5 h-5 text-white mr-5 text-sm"
+              >
+                2
+              </div>
+              <h3 class="font-semibold">5 continents</h3>
+            </div>
+            <p class="pl-10 mt-2 text-gray-500">45+ countries.</p>
+          </div>
+          <div class="mb-10">
+            <div class="flex">
+              <div
+                class="flex items-center justify-center rounded-full bg-green-600 w-5 h-5 text-white mr-5 text-sm"
+              >
+                3
+              </div>
+              <h3 class="font-semibold">3.1+ million</h3>
+            </div>
+            <p class="pl-10 mt-2 text-gray-500">drivers and couriers</p>
+          </div>
+          <button class="rounded-3xl bg-gray-100 w-32 h-10 font-semibold text-sm">
+            Learn more
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="w-8/12 mx-auto mt-40 mb-40" id="download-our-apps-section">
+      <h2 class="font-semibold text-6xl mb-6 text-center mx-6">Download our apps</h2>
+      <div class="place-content-center flex justify-center mb-10">
+        <button class="rounded-full border-gray-200 border-2 pl-2 pr-2 pt-1 pb-1 text-gray-500 m-2">
+          Rides
+        </button>
+        <button class="rounded-full border-gray-200 border-2 pl-2 pr-2 pt-1 pb-1 text-gray-500 m-2">
+          Delivery
+        </button>
+      </div>
+      <div class="flex w-full bg-green-700 rounded-xl">
+        <div class="w-1/2 p-20">
+          <h1 class="text-4xl font-semibold mt-20 mb-10 text-white">
+            Request in seconds, ride in minutes.
+          </h1>
+          <h3 class="text-white text-lg mb-10">Available for iOs and Android devices.</h3>
+          <button class="rounded-3xl bg-gray-100 w-32 h-10 font-semibold text-sm">
+            Get the app
+          </button>
+        </div>
+        <div class="w-1/2">
+          <img src="../assets/app-shot.webp" class="rounded-xl" alt="" />
         </div>
       </div>
     </div>
