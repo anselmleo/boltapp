@@ -6,7 +6,6 @@ import BannerCTA from '../components/BannerCTA.vue'
 
 <template>
   <main class="relative w-full h-580px">
-    <div id="more-menu-modal"></div>
     <img
       src="../assets/banner2.jpg"
       alt=""
