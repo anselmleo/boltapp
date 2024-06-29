@@ -2,6 +2,19 @@
 import { RouterLink, useRoute } from 'vue-router'
 import { computed } from 'vue'
 
+import { ref } from 'vue'
+
+const isMegaModalOpen = ref(false)
+
+const handleCloseMegaModal = () => {
+  isMegaModalOpen.value = false
+}
+
+const handleOpenMegaModal = () => {
+  alert('i got here')
+  isMegaModalOpen.value = true
+}
+
 const route = useRoute()
 const pageTheme = computed(() => {
   if (route.meta.theme === 'dark') {
@@ -40,13 +53,18 @@ const pageTheme = computed(() => {
           >Sign up</RouterLink
         >
       </div>
-      <img
-        v-if="route.meta.theme !== 'dark'"
-        src="../assets/menu-black.png"
-        alt=""
-        class="w-5 h-5 mt-1"
-      />
-      <img v-else src="../assets/menu-white.png" alt="" class="w-5 h-5 mt-1" />
+      <div class="cursor-pointer" @click="handleOpenMegaModal" v-if="!isMegaModalOpen">
+        <img
+          v-if="route.meta.theme !== 'dark'"
+          src="../assets/menu-black.png"
+          alt=""
+          class="w-5 h-5 mt-1"
+        />
+        <img v-else src="../assets/menu-white.png" alt="" class="w-5 h-5 mt-1" />
+      </div>
+      <div v-if="isMegaModalOpen" @click="handleCloseMegaModal" class="cursor-pointer">
+        <img src="../assets/cancel-white.png" alt="" class="w-5 h-5 mt-1" />
+      </div>
     </div>
   </nav>
 </template>
