@@ -207,9 +207,6 @@ import BannerCTA from '../components/BannerCTA.vue'
             </div>
             <p class="pl-10 mt-2 text-gray-500">drivers and couriers</p>
           </div>
-          <button class="rounded-3xl bg-gray-100 w-32 h-10 font-semibold text-sm">
-            Learn more
-          </button>
         </div>
       </div>
     </div>

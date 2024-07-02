@@ -1,19 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, useRoute } from 'vue-router'
 import { computed } from 'vue'
-
-import { ref } from 'vue'
-
-const isMegaModalOpen = ref(false)
-
-const handleCloseMegaModal = () => {
-  isMegaModalOpen.value = false
-}
-
-const handleOpenMegaModal = () => {
-  alert('i got here')
-  isMegaModalOpen.value = true
-}
+import { showModal, toggleModal } from '@/composables/megaModal'
 
 const route = useRoute()
 const pageTheme = computed(() => {
@@ -53,7 +41,7 @@ const pageTheme = computed(() => {
           >Sign up</RouterLink
         >
       </div>
-      <div class="cursor-pointer" @click="handleOpenMegaModal" v-if="!isMegaModalOpen">
+      <div class="cursor-pointer" @click="toggleModal" v-if="!showModal">
         <img
           v-if="route.meta.theme !== 'dark'"
           src="../assets/menu-black.png"
@@ -62,8 +50,14 @@ const pageTheme = computed(() => {
         />
         <img v-else src="../assets/menu-white.png" alt="" class="w-5 h-5 mt-1" />
       </div>
-      <div v-if="isMegaModalOpen" @click="handleCloseMegaModal" class="cursor-pointer">
-        <img src="../assets/cancel-white.png" alt="" class="w-5 h-5 mt-1" />
+      <div v-if="showModal" @click="toggleModal" class="cursor-pointer">
+        <img
+          v-if="route.meta.theme !== 'dark'"
+          src="../assets/cancel-black.png"
+          alt=""
+          class="w-5 h-5 mt-1"
+        />
+        <img v-else src="../assets/cancel-white.png" alt="" class="w-5 h-5 mt-1" />
       </div>
     </div>
   </nav>
