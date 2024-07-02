@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MegaMenuModal from '../../components/MegaMenuModal.vue'
+import MegaMenuModal from '../../components/MegaMenu.vue'
 import NavBar from '../../components/NavBar.vue'
 import BoltLogo from '@/components/BoltLogo.vue'
 </script>
